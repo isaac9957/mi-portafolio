@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario con DIV</title>
+</head>
+<style> body {
+    font-family: Arial, sans-serif;
+    background-color: #36393f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #7289da;
+}
+
+form {
+    background-color: #2f3136;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #b9bbbe;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #202225;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #7289da;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #5b6eae;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+} </style>
+
+<body>
+    <h1>Crea tu cuenta de Discord</h1>
+   <form action="/registro" method="post">
+       <div>
+           <label for="nombre_completo">nombre completo:</label>
+           <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Ingresa tu nombre">
+       </div>
+       <div>
+        <label for="apellidos">apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos">
+       </div>
+
+       <div>
+           <label for="correo">Correo electrónico:</label>
+           <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo">
+       </div>
+
+       <div>
+           <label for="contraseña">Contraseña:</label>
+           <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" />
+       </div>
+       <div>
+              <label for="confirmar_contraseña">Confirmar contraseña:</label>
+              <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" placeholder="Confirma tu contraseña" />
+       </div>
+       <div>
+        <label for="Fecha_de_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="Fecha_de_nacimiento" name="Fecha_de_nacimiento" placeholder="Ingresa tu fecha de nacimiento">
+       </div>
+       <div>
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero">
+           <option value="masculino">Masculino</option>
+           <option value="femenino">Femenino</option>
+           <option value="pan">pan</option>
+       </div>
+    </select>
+       <div>
+        <label for="intereses">intereses:</label>
+        <select id="intereses" name="intereses">
+           <option value="deportes">Deportes</option>
+           <option value="musica">Música</option>
+           <option value="arte">Arte</option>
+           <option value="tecnologia">Tecnología</option>
+        </div>
+       </select>
+       <div>
+           <label for="terminos">Aceptar términos y condiciones:</label>
+           <input type="checkbox" id="terminos" name="terminos" required>
+       <div>
+        <input type="submit" value="Crear cuenta">
+       </div>   </form>
+</body>
+
+</html>
